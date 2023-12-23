@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+//--------------------------------------Task 1--------------------------------
+
+var fstName= prompt('Your first name?')
+var lastName= prompt('Your last name?')
+var fullName= fstName +' '+ lastName
+console.log('Your full name is ', fullName);
+
+//--------------------------------------Task 2--------------------------------
+var mbl= prompt('What`s your favorite mobile phone model?')
+var prompt= 'My favorite is '+ mbl
+console.log(prompt + '<br>');
+var Lenght= mbl.length
+console.log('Length of string: ',Lenght);
+//--------------------------------------Task 3--------------------------------
+var string= 'Pakistan'
+var index= string.indexOf('n')
+console.log('String:',string);
+console.log("Index of 'n':",index);
+//--------------------------------------Task 44--------------------------------
+
+var string= 'Hello World'
+ var index= string.lastIndexOf('l')
+ console.log('String:',string);
+ console.log("Last index of 'l':",index);
+//--------------------------------------Task ?5--------------------------------
+ var string= 'Pakistan'
+ console.log('String:',string);
+
+ var index= string.slice(3,4) 
+ console.log("Character at index 3:",index);
+
+//------------------------------2nd Way-------------------
+var string= 'Pakistan'
+ console.log('String:',string);
+
+ var index= string.charAt(3) 
+ console.log("Character at index 3:",index);
+ 
+//--------------------------------------Task 6--------------------------------
+var fstName= prompt('Your first name?')
+ var lastName= prompt('Your last name?') 
+ console.log('Your full name is ', fstName.concat(' ',lastName));
+//--------------------------------------Task 7--------------------------------
+var city = ['Hyderabad']
+console.log('city: ',city);
+
+city.splice(0,1,'Islamabad')
+console.log('After replacement: ',city);
+
+// //------------------------------2nd Way-----------
+var city = 'Hyderabad'
+console.log('city: ',city);
+var rep = city.replace('Hyder', 'Islam')
+
+console.log('After replacement: ',rep);
+
+//--------------------------------------Task 8--------------------------------
+var msg= 'Ali and sami are best frients. They play cricket and foodball together. and  and  and  and  and  and  and  and '
+var rep = msg.replace(/and/g,'&')
+console.log(rep);
+//--------------------------------------Task 9--------------------------------
+var s= '470'
+var sChet= typeof(s)
+console.log('Value: ',s);
+console.log('Type: ',sChet);
+
+var n = 472
+var nChet= typeof(n)
+console.log('Value: ',n);
+console.log('Type: ',nChet);
+
+//--------------------------------------Task 10--------------------------------
+var user= prompt('Kuch bhi text likho')
+var uprCase= user.toUpperCase()
+console.log(uprCase);
+//--------------------------------------Task 11--------------------------------
+var user= prompt('Kuch bhi text likho')
+var tltCase= user.charAt(0).toUpperCase() + user.slice(1)
+console.log(tltCase);
+
+//--------------------------------------Task 12--------------------------------
+var num = 35.6
+var cnvrt= num.toString()
+var point= cnvrt.replace('.','')
+console.log('Number: ', num);
+console.log('Result: ',point);
+// --------------------------------------Task 13--------------------------------
+// Take user input for the username
+var username = prompt("Enter your username:");
+
+// Check if the username contains any special symbols [@, ., !]
+var check = /[,@.!]/.test(username);
+
+// Check if the username is valid
+if (!check) {
+    console.log("Username is valid!");
+} else {
+    console.log("Please enter a valid username without special symbols [@, ., !].");
+}
+
+//--------------------------------------Task 14--------------------------------
+
+const A = ['cake', 'apple pie', 'cookie', 'chips', 'patties'];
+var p = prompt("Enter food to buy: ");
+var user= p.toLocaleLowerCase()
+var found = false;
+
+for (var i = 0; i < A.length; i++) {
+  if (user === A[i]) {
+    document.write(`${user} is available at index of ${i} in our bakery.`);
+    found = true;
+    break;
+  }
+}
+
+if (!found) {
+  document.write(`We are sorry. ${user} is not available in our bakery.`);
+}
+
+//--------------------------------------Task 15--------------------------------
+
+var Password = prompt("Enter a password:");
+
+var Alphabets = /[a-zA-Z]/.test(Password); 
+var Numbers = /\d/.test(Password); // This checks for numbers (0-9)
+
+// Check if the password does not start with a number
+var startsWithNumber = /^\d/.test(Password); // This checks if it does not start with a digit
+
+// Check if the password is at least 6 characters long
+var LengthValid = Password.length >= 6;
+
+if (startsWithNumber) {
+    console.log("Password can't begin with a number.");
+} else if (Alphabets && Numbers && LengthValid) {
+    console.log("Password is valid!");
+} else {
+    console.log("Please enter a valid password that meets the specified requirements.");
+}
+
+//--------------------------------------Task 17--------------------------------
+var un= "Universty of Karachi"
+var crt = un.split("")
+
+document.write(crt);
+//--------------------------------------Task 18--------------------------------
+var p =prompt('Enter country name')
+var copy= p.slice(-1)
+console.log(copy);
+//--------------------------------------Task 19--------------------------------
+var str= 'The quick brown fox jumbs over the lazy dog  the the'
+var lowercase= str.toLowerCase()
+var crt= lowercase.split(" ")
+
+var checkWord= "the"
+
+var count = 0;
+ for (let i = 0; i < crt.length; i++) {
+   if (crt[i] === checkWord) {
+      count++;
+console.log(`There are ${count} occurrences(s) of the word ${checkWord}`);
+
+      
+   }
+   
+ }
+
+
+   </script> 
+</body>
+</html>
